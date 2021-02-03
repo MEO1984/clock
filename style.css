@@ -1,0 +1,23 @@
+body {
+    background-color: aqua;
+}
+.page{
+    width: 80%;
+    max-width: 960px;
+    margin: 5px auto;
+    text-align: center;
+    background-color: palevioletred;
+    border-radius: 5px;
+}
+#clock {
+    font-size: 40px;
+    display: block;
+    padding: 5px 0px;
+}
+#photo{
+    max-width: 30em;
+}
+h1, h2, h3, h6 {
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}

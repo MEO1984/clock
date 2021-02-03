@@ -1,3 +1,6 @@
+var wakeUpTime = 1
+
+
 var showCurrentTime = function(){
     var noon = 12;
     var clock = document.getElementById('clock');
@@ -31,6 +34,15 @@ var showCurrentTime = function(){
 var updateClock = function(){
     var time = new Date().getHours();
     var messageText;
+    var image = "assets/default.jpg";
+    var timeEventJS = document.getElementById("timeEvent");
+    var imageJS = document.getElementById("photo");
+
+    if (time == wakeUpTime)
+    {
+        image = ("assets/morning.jpg")
+    }
+    photo.src = image
     showCurrentTime();
 };
 updateClock();
