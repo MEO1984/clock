@@ -1,4 +1,8 @@
-var wakeUpTime = 1
+var wakeUpTime = 7;
+var lunchTime = 12;
+var napTime = 2;
+var evening = 19;
+var partytime;
 
 
 var showCurrentTime = function(){
@@ -38,10 +42,43 @@ var updateClock = function(){
     var timeEventJS = document.getElementById("timeEvent");
     var imageJS = document.getElementById("photo");
 
-    if (time == wakeUpTime)
+    if (time == partytime)
     {
-        image = ("assets/morning.jpg")
+        image = "assets/party.jpg";
+        messageText = "Lets Party!"
     }
+    else if (time == wakeUpTime)
+    {
+        image = ("assets/morning.jpg");
+        messageText = "Time to Wake Up!";
+    }
+    else if (time == lunchTime)
+    {
+        image = "assets/lunch.jpg";
+        messageText = "Lunch Time!";
+    }
+    else if (time == napTime)
+    {
+        image = "assets/nap.jpg";
+        messageText = "Nap Time!"
+    }
+    else if ( time < 12)
+        {
+            image = "assets/sunrise.jpg";
+            messageText = "Good Morning!"
+        }
+    else if (time >= evening)
+        {
+            image = "assets/sunset.jpg";
+            messageText = "Good Evening!"
+        }
+    else 
+    {
+        image = "assets/afternoon.jpg";
+        messageText = "Good Afternoon!"
+    }
+    timeEventJS.innerText = messageText;
+    console.log(messageText);
     photo.src = image
     showCurrentTime();
 };
@@ -49,6 +86,26 @@ updateClock();
 
 var oneSecond = 1000;
 setInterval(updateClock, oneSecond);
+
+var partyButton = document.getElementById("partyButton");
+var partyEvent = function()
+{
+    if (partytime < 0) 
+    {
+        partytime = new Date().getHours();
+        partyButton.innerText = "Party Over!";
+        partyButton.style.backgroundColor = "#0A8DAB";
+    }
+    else
+    {
+        partytime = -1;
+        partyButton.innerText = "Party Time!";
+        partyButton.style.backgroundColor = "#222";
+    }
+};
+
+partyButton.addEventListener("click", partyEvent);
+partyEvent(); 
 
 var wakeUpSelector = document.getElementById("wakeUpSelector");
 var wakeUpEvent = function(){
@@ -70,3 +127,5 @@ var napEvent = function(){
     console.log(napTime);
 };
 napSelector.addEventListener("change", napEvent);
+var partyButton = document.getElementById("partyButton");
+
