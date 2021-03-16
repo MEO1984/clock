@@ -1,12 +1,12 @@
 body {
-    background-image: url(assets/clock.jpg)
+    background-color: peachpuff;
 }
 .page{
     width: 80%;
     max-width: 960px;
     margin: 5px auto;
     text-align: center;
-    background-color: gray;
+    /* background-color: gray; */
     border-radius: 5px;
 }
 #clock {
@@ -33,6 +33,10 @@ blockquote {
   blockquote:before { content: '"'; }
   blockquote:after { content: '"'; }
 
-  #wakeUpTimeSelector, #lunchTimeSelector, #napTimeSelector {
+  #timeEvent {
     padding: 10px 0;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  .font, #partyButton {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
