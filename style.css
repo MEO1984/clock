@@ -1,12 +1,12 @@
 body {
-    background-color: aqua;
+    background-image: url(assets/clock.jpg)
 }
 .page{
     width: 80%;
     max-width: 960px;
     margin: 5px auto;
     text-align: center;
-    background-color: palevioletred;
+    background-color: gray;
     border-radius: 5px;
 }
 #clock {
@@ -15,7 +15,8 @@ body {
     padding: 5px 0px;
 }
 #photo{
-    max-width: 30em;
+    width: 30em;
+    height: 15em;
 }
 h1, h2, h3, h6 {
 font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
